@@ -9,6 +9,7 @@
 #include <cstring>
 #include <iostream>
 #include <vector>
+inline void keep_window_open() { char ch; std::cin >> ch; }
 using namespace std;
 using namespace my_code;
 
@@ -30,6 +31,7 @@ int main()
 	vii test;
 	//cout << "Hello World\n";
 	read_file_for_me();
+	keep_window_open();
     return 0;
 }
 
