@@ -1,64 +1,90 @@
 
-#include "stdafx.h"
+//#include "stdafx.h"
+#include "stdio.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <cstdio>
 #include <string>
 #include <vector>
-#include <ios>
-inline void keep_window_open() { char ch; std::cin >> ch; }
+//#include <ios>
+//inline void keep_window_open() { char ch; std::cin >> ch; }
 
-#define ONLINE_JUDGE
+//#define ONLINE_JUDGE
 
 int main() {
-#ifndef ONLINE_JUDGE
-	std::string line;
-	std::ifstream infile("a.in");
-	if (infile.is_open())
-	{
-		std::ofstream outfile("a.out");
-		std::ostringstream oss{};
-		if (outfile.is_open())
-		{
-			while (std::getline(infile, line))
-			{
-				oss << line << "\n";
-			}
-			outfile << oss.str();
+	// OPTION 1
+//#ifndef ONLINE_JUDGE
+//	std::string line;
+//	std::ifstream infile("a.in");
+//	if (infile.is_open())
+//	{
+//		std::ofstream outfile("a.out");
+//		std::ostringstream oss{};
+//		if (outfile.is_open())
+//		{
+//			while (std::getline(infile, line))
+//			{
+//				oss << line << "\n";
+//			}
+//			outfile << oss.str();
+//
+//			/*int c = 1;
+//			while (std::getline(ss, line)) {
+//				if (c > 1) outfile << '\n';
+//				c++;
+//			}*/
+//
+//			outfile.close();
+//		}
+//		else std::cout << "Unable to open file for writing";
+//
+//		infile.close();
+//	}
+//
+//	else std::cout << "Unable to open for reading";
+//
+//	return 0;
+//
+//
+//#endif
 
-			/*int c = 1;
-			while (std::getline(ss, line)) {
-				if (c > 1) outfile << '\n';
-				c++;
-			}*/
+	// Archive
 
-			outfile.close();
-		}
-		else std::cout << "Unable to open file for writing";
+	/*char line[110];
+	freopen("a.in", "r", stdin);
+	std::string text = "";
+	while (1) {
+	fgets(line, 100, stdin);
+	text += line;
 
-		infile.close();
+	if (feof(stdin)) break;
 	}
 
-	else std::cout << "Unable to open for reading";
+	printf("%s", text.c_str());*/
 
-	return 0;
-
-
+#ifndef ONLINE_JUDGE	
+	freopen("b.in", "r", stdin);
+	freopen("b.out", "w", stdout);
 #endif
-#ifdef ONLINE_JUDGE
-	std::string input;
-	//std::cin >> input;
-
-	std::string output;
 	//int n = input.size(), 
 	int wp = 0;
-	std::vector<char> working(100);
+	std::vector<char> working(1000000);
 	int i = 0;
 	char ch;	
+	bool first = true;
 	while(std::cin.get(ch)) {
 		if (ch == '"') { 
-			working[wp] = '`'; 
-			working[wp + 1] = '`';
+			if (first) {
+				working[wp] = '`';
+				working[wp + 1] = '`';
+				first = false;
+			}
+			else {
+				working[wp] = '\'';
+				working[wp + 1] = '\'';
+				first = true;
+			}			
 			wp += 2;
 		} else 
 		working[wp++] = ch;
@@ -66,6 +92,8 @@ int main() {
 
 
 	std::cout << std::string(&working[0], &working[wp]);
-	keep_window_open();
+	std::cout.flush();
+#ifndef ONLINE_JUDGE
+//	keep_window_open();
 #endif
 }
