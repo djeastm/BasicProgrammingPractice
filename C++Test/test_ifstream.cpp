@@ -8,28 +8,28 @@
 #include <iterator>
 #include <set>
 
-template<typename T, typename ... Args>
-unique_ptr<T> make_unique(Args&&... args)
-{
-	// a way to make a "make_unique" to match the std make_shared, if needed
-	return std::unique_ptr<T>{new T{ std::forward<Args>(args)... }};
-}
-
-namespace Estd {
-	using namespace std;
-	template<typename C>
-	void sort(C& c)
-	{
-		sor t(c.begin(), c.end());
-	}
-	template<typename C, typename Pred>
-	void sort(C& c, Pred p)
-	{
-		sor t(c.begin(), c.end(), p);
-	}
-	// ...
-}
-using namespace Estd;
+//template<typename T, typename ... Args>
+//unique_ptr<T> make_unique(Args&&... args)
+//{
+//	// a way to make a "make_unique" to match the std make_shared, if needed
+//	return std::unique_ptr<T>{new T{ std::forward<Args>(args)... }};
+//}
+//
+//namespace Estd {
+//	using namespace std;
+//	template<typename C>
+//	void sort(C& c)
+//	{
+//		sor t(c.begin(), c.end());
+//	}
+//	template<typename C, typename Pred>
+//	void sort(C& c, Pred p)
+//	{
+//		sor t(c.begin(), c.end(), p);
+//	}
+//	// ...
+//}
+using namespace std;
 
 int main()
 {

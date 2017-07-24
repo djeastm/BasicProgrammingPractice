@@ -64,8 +64,8 @@ int main() {
 	printf("%s", text.c_str());*/
 
 #ifndef ONLINE_JUDGE	
-	freopen("b.in", "r", stdin);
-	freopen("b.out", "w", stdout);
+	freopen("00272.in", "r", stdin);
+	freopen("00272.out", "w", stdout);
 #endif
 	//int n = input.size(), 
 	int wp = 0;

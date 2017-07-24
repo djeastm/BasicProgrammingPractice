@@ -30,7 +30,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UVA00272.cpp">
+    <ClCompile Include="11172.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="00272.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
