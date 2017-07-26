@@ -56,7 +56,7 @@ int main()
 	set<string> b{ ii,eos }; // collect strings from input
 	copy(b.begin(), b.end(), oo); // copy buffer to output
 
-	return !is.eof() || !os; // retur n error state (§1.3, §8.4)
+	return !is.eof() || !os; // return error state (§1.3, §8.4)
 
 	
 }
