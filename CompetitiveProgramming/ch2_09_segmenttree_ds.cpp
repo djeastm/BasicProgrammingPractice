@@ -50,13 +50,13 @@ private: vi st, A;            // recall that vi is: typedef vector<int> vi;
       return st[p] = L; // this index
     }
 
-    // compute the minimum pition in the 
+    // compute the minimum position in the 
     // left and right part of the interval
     int p1, p2;
     p1 = update_point(left(p) , L              , (L + R) / 2, idx, new_value);
     p2 = update_point(right(p), (L + R) / 2 + 1, R          , idx, new_value);
 
-    // return the pition where the overall minimum is
+    // return the position where the overall minimum is
     return st[p] = (A[p1] <= A[p2]) ? p1 : p2;
   }
 

@@ -44,17 +44,17 @@ void my_code::read_file_for_me() {
   // Option 2: number of test cases given in first line of input
   
   int TC, a, b;
-  scanf("%d", &TC); // number of test cases | 1 2 | 12
-  while (TC--) { // shortcut to repeat until 0 | 5 7 | 9
-    scanf("%d %d", &a, &b); // compute answer | 6 3 |--------------
-    printf("%d\n", a + b); // on the fly |--------------|
+  scanf("%d", &TC); // number of test cases 
+  while (TC--) { 
+    scanf("%d %d", &a, &b); 
+    printf("%d\n", a + b); 
   }
   
   printf("\n######\n");
   // Option 3: multiple test cases terminated by special values
   // in this case, zeros
   
-  while (scanf("%d %d", &a, &b), (a || b)) // because 0 means false in C++
+  while (scanf("%d %d", &a, &b), (a || b))
     printf("%d\n", a + b);
   printf("\n######\n");
 
@@ -123,5 +123,17 @@ void my_code::read_file_for_me() {
   }
   fclose(fp);
   printf("\n######\n");*/
+
+  // reading into characters
+  /*int trees, acorns;
+  while (TC--) {
+    while (scanf(" (%c,%c)", &a, &b)) {
+      if (a == '*') break;
+      printf("%c, %c\n", a, b);
+    }
+
+
+    printf("There are %d tree(s) and %d acorn(s).\n", trees, acorns);
+  }*/
 }
 
