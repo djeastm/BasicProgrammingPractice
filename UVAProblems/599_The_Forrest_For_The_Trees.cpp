@@ -26,9 +26,7 @@ int main() {
       if (a == '*') break;
       int x = a - 'A';
       int y = b - 'A';
-      //printf("%d, %d\n", x, y);
       bs.set(x); bs.set(y);
-      //std::cout << bs;
     }    
     int v = 0;    
     char comma;
